@@ -15,12 +15,11 @@ if __name__ == "__main__":
         print("Error: invalid argument")
         sys.exit(1)
 
-    path_used = set()
     path_found = []
+
     for i in range(n):
         p = 1 + (i * (m - 1)) % n
-        if p in path_used:
+        if p == 1 and i != 0:
             break
-        path_used.add(p)
         path_found.append(str(p))
     print(''.join(path_found))
